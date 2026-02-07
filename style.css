@@ -1,3 +1,6 @@
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+
+
 * { box-sizing: border-box; }
 
 body {
@@ -6,8 +9,9 @@ body {
   display: grid;
   place-items: center;
   background: #111;
-  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
   padding: 16px;
+
+  font-family: "Press Start 2P", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
 }
 
 .stage {
@@ -179,4 +183,17 @@ body {
   font-weight: 900;
   cursor: pointer;
 }
+
+.text,
+.promptText,
+.label,
+.finalText,
+.continue {
+  letter-spacing: 0.5px;
+}
+
+.text {
+  text-transform: uppercase;
+}
+
 
