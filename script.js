@@ -118,6 +118,15 @@ function next() {
   renderScene();
 }
 
+const uiSelect = new Audio("assets/select.mp3");
+uiSelect.volume = 0.6;
+
+function playSelect() {
+  if (!soundOn) return;
+  uiSelect.currentTime = 0;
+  uiSelect.play();
+}
+
 // ====== Celebration after clicking YES ======
 function celebrate() {
       // switch music
@@ -154,7 +163,10 @@ function celebrate() {
 }
 
 // ====== Event listeners ======
-continueBtn.addEventListener("click", next);
+continueBtn.addEventListener("click", () => {
+  playSelect();
+  next();
+});
 
 // Press Enter to continue (like a game)
 document.addEventListener("keydown", (e) => {
@@ -180,7 +192,8 @@ document.addEventListener("keydown", (e) => {
     return;
   }
 
-  next();
+playSelect();
+next();
 });
 
 
