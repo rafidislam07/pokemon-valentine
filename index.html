@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>💌 Pokémon Valentine</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <main class="stage" id="stage">
+
+    <button class="soundToggle" id="soundToggle" aria-label="Toggle sound">
+  🔊 Sound: Off
+</button>
+
+    <!-- Background image layer -->
+    <div class="bg" id="bg"></div>
+
+    <!-- Text box (like Pokémon dialogue) -->
+    <section class="textbox">
+      <p class="text" id="text"></p>
+
+      <div class="controls">
+        <button class="continue" id="continueBtn">Continue</button>
+        <span class="hint">Press Enter ↵</span>
+      </div>
+    </section>
+
+    <!-- Choice buttons (hidden until final question) -->
+    <section class="choices hidden" id="choices">
+      <button class="choice" data-choice="yes1">
+        <img src="assets/poke.png" class="pokeball" alt="pokeball" />
+        <div class="label">Yes 💖</div>
+      </button>
+
+      <button class="choice" data-choice="yes2">
+        <img src="assets/poke.png" class="pokeball" alt="pokeball" />
+        <div class="label">YES 💘</div>
+      </button>
+
+      <button class="choice" data-choice="yes3">
+        <img src="assets/poke.png" class="pokeball" alt="pokeball" />
+        <div class="label">Of course 🥹</div>
+      </button>
+    </section>
+
+    <!-- Celebration (hidden until she picks yes) -->
+    <section class="celebrate hidden" id="celebrate">
+      <div class="finalText" id="finalText"></div>
+      <div class="gifRow" id="gifRow"></div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
